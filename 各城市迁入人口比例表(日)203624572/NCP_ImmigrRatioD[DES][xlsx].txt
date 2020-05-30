@@ -1,0 +1,8 @@
+SgnDate [统计日期] - 
+ImCityName [迁入地区] - 
+ImCityCode [迁入地区代码] - 
+ImProvinceName [隶属省份] - 
+ImFromoCity [迁入来源地] - 
+ImFromCityCode [迁入来源地代码] - 
+ImFromProvince [迁入来源地隶属省份] - 
+ImRate [迁入人口比例] - 从xx地迁入到当前区域的人数与当前区域迁入总人口的比值

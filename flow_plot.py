@@ -1,0 +1,36 @@
+import  pandas as pd
+import matplotlib.pyplot as plt
+###1.20：人传人，1.23 武汉封城
+migrate=pd.read_excel("DATA\\huwan_migrate.xlsx")
+print(migrate)
+plt.subplots(figsize=(27,9))
+plt.subplot(131)
+#######into
+plt.plot(migrate["date"],migrate["into_2020"],color="black")
+plt.plot(migrate["date"],migrate["into_2019"],color="black",linestyle="-.")
+plt.xticks(rotation=90)
+plt.xlabel("Date")
+plt.ylabel("Inflow Intensity")
+plt.vlines(x="2020-01-23",ymin=0,ymax=12,color="green",linewidth=2,alpha=0.5)
+plt.vlines(x="2020-01-20",ymin=0,ymax=12,color="blue",linewidth=2,alpha=0.5)
+######Outflow
+plt.subplot(132)
+plt.plot(migrate["date"],migrate["out_2020"],color="black")
+plt.plot(migrate["date"],migrate["out_2019"],color="black",linestyle="-.")
+plt.xticks(rotation=90)
+plt.xlabel("Date")
+plt.ylabel("Outflow Intensity")
+plt.vlines(x="2020-01-23",ymin=0,ymax=12,color="green",linewidth=2,alpha=0.5)
+plt.vlines(x="2020-01-20",ymin=0,ymax=12,color="blue",linewidth=2,alpha=0.5)
+#####WithinFlow
+plt.subplot(133)
+plt.plot(migrate["date"],migrate["within_2020"],color="black")
+plt.plot(migrate["date"],migrate["within_2019"],color="black",linestyle="-.")
+plt.xticks(rotation=90)
+plt.xlabel("Date")
+plt.ylabel("Within Flow Intensity")
+plt.vlines(x="2020-01-23",ymin=0,ymax=12,color="green",linewidth=2,alpha=0.5)
+plt.vlines(x="2020-01-20",ymin=0,ymax=12,color="blue",linewidth=2,alpha=0.5)
+plt.legend(["2020","2019"])
+plt.suptitle("Within-City and Inner-City Flow in Wuhan",fontsize=20)
+plt.savefig("wuhan_flow")

@@ -1,0 +1,8 @@
+SgnDate [统计日期] - 
+EmCityName [迁出地区] - 
+EmCityCode [迁出地区代码] - 
+EmProvinceName [隶属省份] - 
+EmToCity [迁出目的地] - 
+EmToCityCode [迁出目的地代码] - 
+EmToProvince [迁出目的地隶属省份] - 
+EmRate [迁出人口比例] - 从当前区域迁出到xx的人口与从当前区域迁出总人口的比值
